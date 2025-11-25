@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import type { Feature } from "@/types";
@@ -9,7 +8,7 @@ interface FeatureCardProps {
 
 export function FeatureCard({ feature }: FeatureCardProps) {
     return (
-        <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow group">
+        <Card className="overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow group" role="listitem">
             <div className="relative h-64 overflow-hidden">
                 <Image
                     src={feature.image}
@@ -23,7 +22,7 @@ export function FeatureCard({ feature }: FeatureCardProps) {
                 <h3 className="text-2xl font-heading font-bold text-primary">
                     {feature.title}
                 </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <p className="text-foreground/80 font-medium">{feature.description}</p>
                 {feature.price && (
                     <span className="block text-xl font-bold text-secondary">
                         {feature.price}

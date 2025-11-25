@@ -15,7 +15,7 @@ export function SectionHeader({ title, subtitle, className, align = "center" }: 
             className
         )}>
             {subtitle && (
-                <span className="text-secondary font-medium tracking-wider uppercase text-sm">
+                <span className="text-secondary font-bold tracking-wider uppercase text-sm">
                     {subtitle}
                 </span>
             )}

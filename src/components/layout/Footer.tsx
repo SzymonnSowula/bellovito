@@ -43,9 +43,9 @@ export function Footer() {
                         <li className="flex justify-between"><span>Niedz:</span> <span>12:00 - 21:00</span></li>
                     </ul>
                     <div className="flex gap-4 mt-6">
-                        <Link href="#" className="hover:text-white transition-colors"><Facebook className="h-5 w-5" /></Link>
-                        <Link href="#" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></Link>
-                        <Link href="#" className="hover:text-white transition-colors"><Twitter className="h-5 w-5" /></Link>
+                        <Link href="#facebook" className="hover:text-white transition-colors"><Facebook className="h-5 w-5" /></Link>
+                        <Link href="#instagram" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></Link>
+                        <Link href="#twitter" className="hover:text-white transition-colors"><Twitter className="h-5 w-5" /></Link>
                     </div>
                 </div>
             </div>

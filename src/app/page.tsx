@@ -48,7 +48,7 @@ export default function Home() {
       <SectionWrapper className="bg-background">
         <SectionHeader title="Kulinarne Arcydzieła" subtitle="Nasze Specjalności" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" role="list" aria-label="Nasze specjalności">
           {features.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}
