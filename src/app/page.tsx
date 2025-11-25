@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { FeatureCard } from "@/components/cards/FeatureCard";
-import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { StorySection } from "@/components/sections/StorySection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { NewsSection } from "@/components/sections/NewsSection";
+
+
 import { features } from "@/data/features";
-import { testimonials } from "@/data/testimonials";
 
 export default function Home() {
   return (
@@ -153,14 +154,10 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <SectionWrapper className="bg-gradient-to-b from-muted/20 to-background relative">
-        <SectionHeader title="Opinie Gości" subtitle="Co Mówią O Nas" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
-        </div>
-      </SectionWrapper>
+      <TestimonialsSection />
+
+      {/* News Section */}
+      <NewsSection />
 
       {/* CTA Section */}
       <section className="relative py-24 flex items-center justify-center overflow-hidden bg-primary text-white">
