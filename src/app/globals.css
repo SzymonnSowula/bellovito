@@ -19,7 +19,7 @@
 
     /* Muted / Accents */
     --muted: 40 20% 90%;
-    --muted-foreground: 0 0% 40%;
+    --muted-foreground: 0 0% 35%; /* Improved contrast from 40% to 35% */
 
     --accent: 39 48% 56%;
     --accent-foreground: 0 0% 10%;

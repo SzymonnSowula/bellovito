@@ -1,13 +1,23 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { StorySection } from "@/components/sections/StorySection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { NewsSection } from "@/components/sections/NewsSection";
 
+// Dynamic imports for heavy components with framer-motion
+const StorySection = dynamic(() => import("@/components/sections/StorySection").then(mod => ({ default: mod.StorySection })), {
+  loading: () => <div className="h-screen flex items-center justify-center">Ładowanie...</div>
+});
+
+const TestimonialsSection = dynamic(() => import("@/components/sections/TestimonialsSection").then(mod => ({ default: mod.TestimonialsSection })), {
+  loading: () => <div className="h-[600px] flex items-center justify-center">Ładowanie...</div>
+});
+
+const NewsSection = dynamic(() => import("@/components/sections/NewsSection").then(mod => ({ default: mod.NewsSection })), {
+  loading: () => <div className="min-h-screen flex items-center justify-center">Ładowanie...</div>
+});
 
 import { features } from "@/data/features";
 

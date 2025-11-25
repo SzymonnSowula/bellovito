@@ -27,8 +27,8 @@ export function TestimonialsSection() {
                     src="/images/testimonials_bg.png"
                     alt="Włoski piec do pizzy"
                     fill
+                    sizes="100vw"
                     className="object-cover"
-                    priority
                 />
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/60" />

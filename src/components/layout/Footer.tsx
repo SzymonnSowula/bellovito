@@ -43,9 +43,27 @@ export function Footer() {
                         <li className="flex justify-between"><span>Niedz:</span> <span>12:00 - 21:00</span></li>
                     </ul>
                     <div className="flex gap-4 mt-6">
-                        <Link href="#facebook" className="text-muted-foreground hover:text-primary transition-colors"><Facebook className="h-5 w-5" /></Link>
-                        <Link href="#instagram" className="text-muted-foreground hover:text-primary transition-colors"><Instagram className="h-5 w-5" /></Link>
-                        <Link href="#twitter" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="h-5 w-5" /></Link>
+                        <Link
+                            href="#facebook"
+                            aria-label="Odwiedź naszą stronę na Facebooku"
+                            className="text-muted-foreground hover:text-primary transition-colors w-10 h-10 flex items-center justify-center"
+                        >
+                            <Facebook className="h-5 w-5" />
+                        </Link>
+                        <Link
+                            href="#instagram"
+                            aria-label="Sprawdź nasz profil na Instagramie"
+                            className="text-muted-foreground hover:text-primary transition-colors w-10 h-10 flex items-center justify-center"
+                        >
+                            <Instagram className="h-5 w-5" />
+                        </Link>
+                        <Link
+                            href="#twitter"
+                            aria-label="Śledź nas na Twitterze"
+                            className="text-muted-foreground hover:text-primary transition-colors w-10 h-10 flex items-center justify-center"
+                        >
+                            <Twitter className="h-5 w-5" />
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -23,6 +23,11 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: "BelloVito | Autentyczna Kuchnia Włoska",
   description: "Doświadcz najlepszej włoskiej kuchni w BelloVito. Świeże składniki, tradycyjne przepisy i niezapomniana atmosfera.",
+  openGraph: {
+    title: "BelloVito | Autentyczna Kuchnia Włoska",
+    description: "Doświadcz najlepszej włoskiej kuchni w BelloVito.",
+    locale: "pl_PL",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
