@@ -54,8 +54,8 @@ export function Navbar() {
                     BelloVito
                 </Link>
 
-                {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8" aria-label="Nawigacja główna">
+                {/* Desktop Nav - Visible only on LG screens and up */}
+                <nav className="hidden lg:flex items-center gap-8" aria-label="Nawigacja główna">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -78,10 +78,10 @@ export function Navbar() {
                     </Button>
                 </nav>
 
-                {/* Mobile Nav */}
+                {/* Mobile Nav - Visible on screens smaller than LG */}
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon" className={cn("md:hidden", isTransparent ? "text-white hover:bg-white/20" : "")} aria-label="Otwórz menu">
+                        <Button variant="ghost" size="icon" className={cn("lg:hidden", isTransparent ? "text-white hover:bg-white/20" : "")} aria-label="Otwórz menu">
                             <Menu className="h-6 w-6" />
                         </Button>
                     </SheetTrigger>
