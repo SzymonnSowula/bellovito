@@ -22,7 +22,7 @@ export function SectionHeader({ title, subtitle, className, align = "center" }: 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground">
                 {title}
             </h2>
-            <div className={cn("h-1 w-20 bg-primary mt-4", align === "center" && "mx-auto", align === "right" && "ml-auto")} />
+            <div className={cn("h-1 w-20 bg-primary mt-4", align === "center" && "mx-auto", align === "right" && "ml-auto")} aria-hidden="true" />
         </div>
     );
 }

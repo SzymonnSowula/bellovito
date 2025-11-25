@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
@@ -22,12 +22,12 @@ const navLinks = [
 ];
 
 export function Navbar() {
-    const [isScrolled, setIsScrolled] = React.useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
     const isHome = pathname === "/";
     const isTransparent = isHome && !isScrolled;
 
-    React.useEffect(() => {
+    useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         };
@@ -45,6 +45,7 @@ export function Navbar() {
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
                 <Link
                     href="/"
+                    aria-label="BelloVito - Strona główna"
                     className={cn(
                         "text-2xl md:text-3xl font-heading font-bold transition-colors",
                         isTransparent ? "text-white" : "text-primary"
@@ -54,7 +55,7 @@ export function Navbar() {
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-8">
+                <nav className="hidden md:flex items-center gap-8" aria-label="Nawigacja główna">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
@@ -80,18 +81,17 @@ export function Navbar() {
                 {/* Mobile Nav */}
                 <Sheet>
                     <SheetTrigger asChild>
-                        <Button variant="ghost" size="icon" className={cn("md:hidden", isTransparent ? "text-white hover:bg-white/20" : "")}>
+                        <Button variant="ghost" size="icon" className={cn("md:hidden", isTransparent ? "text-white hover:bg-white/20" : "")} aria-label="Otwórz menu">
                             <Menu className="h-6 w-6" />
-                            <span className="sr-only">Przełącz menu</span>
                         </Button>
                     </SheetTrigger>
                     <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                         <SheetTitle className="sr-only">Menu Nawigacji</SheetTitle>
                         <div className="flex flex-col gap-8 mt-8">
-                            <Link href="/" className="text-2xl font-heading font-bold text-primary self-center">
+                            <Link href="/" className="text-2xl font-heading font-bold text-primary self-center" aria-label="BelloVito - Strona główna">
                                 BelloVito
                             </Link>
-                            <nav className="flex flex-col gap-4">
+                            <nav className="flex flex-col gap-4" aria-label="Nawigacja mobilna">
                                 {navLinks.map((link) => (
                                     <Link
                                         key={link.name}

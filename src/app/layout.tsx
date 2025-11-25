@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
@@ -22,13 +23,9 @@ export const metadata: Metadata = {
   description: "Doświadcz najlepszej włoskiej kuchni w BelloVito. Świeże składniki, tradycyjne przepisy i niezapomniana atmosfera.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pl">
       <body
         className={`${playfair.variable} ${lato.variable} antialiased bg-background text-foreground font-body flex flex-col min-h-screen`}
       >
