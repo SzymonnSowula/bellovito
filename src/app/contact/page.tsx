@@ -74,7 +74,6 @@ export default function ContactPage() {
                             style={{ border: 0 }}
                             allowFullScreen
                             loading="lazy"
-                            className="grayscale hover:grayscale-0 transition-all duration-500"
                         ></iframe>
                     </div>
                 </div>
