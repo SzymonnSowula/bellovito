@@ -95,43 +95,45 @@ export default function Home() {
       <StorySection />
 
       {/* Menu Preview - Editorial Style */}
-      <section className="py-24 bg-grain bg-[#FDFBF7] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-cream relative overflow-hidden">
         {/* Giant Typography Background */}
-        <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none opacity-[0.03]">
+        <div className="absolute top-0 left-0 w-full overflow-hidden pointer-events-none opacity-[0.02]">
           <span className="text-editorial-huge font-dancing whitespace-nowrap text-primary">Menu Menu Menu</span>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row gap-12 items-start">
-            {/* Left: Image */}
-            <div className="lg:w-5/12 relative group">
-              <div className="overflow-hidden rounded-t-[10rem] rounded-b-lg shadow-xl h-[600px] relative">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
+
+            {/* Left: Image - Hidden on mobile for performance */}
+            <div className="w-full lg:w-5/12 relative group hidden md:block">
+              <div className="overflow-hidden rounded-t-[10rem] rounded-b-lg shadow-xl aspect-[3/4] relative">
                 <Image
                   src="/images/pasta.png"
                   alt="Domowy makaron"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
               </div>
               <div className="absolute bottom-8 left-8 text-white">
-                <p className="font-dancing text-3xl">Domowa Pasta</p>
+                <p className="font-dancing text-2xl md:text-3xl">Domowa Pasta</p>
                 <p className="text-sm opacity-90">Robiona ręcznie każdego ranka</p>
               </div>
             </div>
 
             {/* Right: Menu List */}
-            <div className="lg:w-7/12 pt-12 lg:pl-12">
+            <div className="w-full lg:w-7/12 lg:pl-8">
               <SectionHeader title="Wybrane Specjały" subtitle="Karta Dań" align="left" />
 
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8 mt-8">
                 {features.map((feature) => (
                   <div key={feature.id} className="group cursor-pointer">
-                    <div className="flex justify-between items-baseline border-b border-primary/10 pb-4 mb-2 group-hover:border-primary/40 transition-colors">
-                      <h3 className="text-2xl font-dancing text-primary group-hover:text-secondary transition-colors">
+                    <div className="flex justify-between items-baseline border-b border-primary/10 pb-3 mb-2 group-hover:border-primary/40 transition-colors">
+                      <h3 className="text-xl md:text-2xl font-dancing text-primary group-hover:text-secondary transition-colors pr-4">
                         {feature.title}
                       </h3>
-                      <span className="text-xl font-bold text-secondary">{feature.price}</span>
+                      <span className="text-lg md:text-xl font-bold text-secondary whitespace-nowrap">{feature.price}</span>
                     </div>
                     <p className="text-muted-foreground text-sm md:text-base max-w-xl group-hover:text-foreground transition-colors">
                       {feature.description}
@@ -140,8 +142,8 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-12">
-                <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-8 py-6 text-lg">
+              <div className="mt-8 md:mt-12">
+                <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-6 md:px-8 py-5 md:py-6 text-base md:text-lg w-full md:w-auto">
                   <Link href="/menu">Zobacz Pełną Kartę</Link>
                 </Button>
               </div>
