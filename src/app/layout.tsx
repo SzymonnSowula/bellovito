@@ -1,22 +1,24 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Poppins, Dancing_Script } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-poppins",
   display: "swap",
 });
 
-const lato = Lato({
-  weight: ["400", "700"],
+const dancingScript = Dancing_Script({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-lato",
+  variable: "--font-dancing",
   display: "swap",
 });
+
 
 export const metadata: Metadata = {
   title: "BelloVito | Autentyczna Kuchnia Włoska",
@@ -27,7 +29,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pl">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased bg-background text-foreground font-body flex flex-col min-h-screen`}
+        className={`${poppins.variable} ${dancingScript.variable} antialiased bg-background text-foreground font-sans flex flex-col min-h-screen`}
       >
         <Navbar />
         <main className="flex-grow">

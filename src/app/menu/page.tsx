@@ -88,9 +88,9 @@ export default function MenuPage() {
                                 {cat.items.map((item, index) => (
                                     <Card key={index} className="border-none shadow-sm hover:shadow-md transition-shadow">
                                         <CardHeader className="pb-2">
-                                            <div className="flex justify-between items-start">
-                                                <CardTitle className="text-xl font-heading text-primary">{item.name}</CardTitle>
-                                                <span className="font-bold text-secondary">{item.price}</span>
+                                            <div className="flex justify-between items-start gap-4">
+                                                <CardTitle className="text-xl font-dancing text-primary">{item.name}</CardTitle>
+                                                <span className="font-bold text-secondary whitespace-nowrap">{item.price}</span>
                                             </div>
                                         </CardHeader>
                                         <CardContent>
