@@ -173,7 +173,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="relative py-24 flex items-center justify-center overflow-hidden bg-primary text-white">
         <div className="container mx-auto px-4 text-center space-y-6 relative z-10">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold">Gotowy na Niezapomnianą Ucztę?</h2>
+          <h2 className="text-3xl md:text-5xl font-dancing">Gotowy na Niezapomnianą Ucztę?</h2>
           <p className="text-lg opacity-90 max-w-2xl mx-auto">
             Zarezerwuj swój stolik już teraz i pozwól nam zabrać Cię w kulinarną podróż przez Włochy.
           </p>

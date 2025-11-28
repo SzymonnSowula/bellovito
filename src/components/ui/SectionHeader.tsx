@@ -19,7 +19,7 @@ export function SectionHeader({ title, subtitle, className, align = "center" }: 
                     {subtitle}
                 </span>
             )}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-dancing text-foreground leading-tight">
                 {title}
             </h2>
         </div>

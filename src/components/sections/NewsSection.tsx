@@ -42,7 +42,7 @@ export function NewsSection() {
                     <h3 className="text-3xl md:text-4xl font-dancing text-primary">
                         Aktualności
                     </h3>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground uppercase tracking-wide">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-dancing text-foreground tracking-wide">
                         Z NASZEJ RESTAURACJI I PIZZERII
                     </h2>
                     <div className="w-16 h-px bg-border mx-auto mt-6" />
@@ -64,7 +64,7 @@ export function NewsSection() {
 
                             {/* Content */}
                             <div className="flex flex-col flex-grow items-start text-left space-y-4">
-                                <h3 className="text-xl font-bold text-foreground leading-tight group-hover:text-primary transition-colors">
+                                <h3 className="text-xl font-dancing text-foreground leading-tight group-hover:text-primary transition-colors">
                                     {item.title}
                                 </h3>
 
@@ -79,7 +79,7 @@ export function NewsSection() {
 
                                     <Link
                                         href={item.slug}
-                                        className="inline-flex items-center text-sm font-bold text-foreground hover:text-primary transition-colors group/link"
+                                        className="inline-flex items-center text-sm font-semibold text-foreground hover:text-primary transition-colors group/link"
                                     >
                                         — więcej
                                     </Link>
@@ -94,7 +94,7 @@ export function NewsSection() {
                     <Button
                         asChild
                         variant="outline"
-                        className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-10 py-6 text-sm font-bold tracking-widest uppercase transition-all duration-300"
+                        className="border-primary text-primary hover:bg-primary hover:text-white rounded-full px-10 py-6 text-sm font-semibold tracking-widest uppercase transition-all duration-300"
                     >
                         <Link href="/blog">
                             ZOBACZ WSZYSTKIE

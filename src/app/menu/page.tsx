@@ -75,26 +75,46 @@ export default function MenuPage() {
             <SectionWrapper>
                 <SectionHeader title="Nasze Menu" subtitle="Autentyczne Włoskie Smaki" />
 
-                <Tabs defaultValue="antipasti" className="w-full max-w-4xl mx-auto">
-                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+                <Tabs defaultValue="antipasti" className="w-full max-w-6xl mx-auto">
+                    {/* Improved TabsList with better mobile styling */}
+                    <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-12 h-auto gap-2 bg-transparent p-0">
                         {menuCategories.map(cat => (
-                            <TabsTrigger key={cat.id} value={cat.id}>{cat.label}</TabsTrigger>
+                            <TabsTrigger
+                                key={cat.id}
+                                value={cat.id}
+                                className="data-[state=active]:bg-primary data-[state=active]:text-white bg-white border border-primary/20 text-foreground hover:bg-primary/10 rounded-lg py-3 px-4 text-sm md:text-base font-semibold transition-all shadow-sm data-[state=active]:shadow-md"
+                            >
+                                {cat.label}
+                            </TabsTrigger>
                         ))}
                     </TabsList>
 
                     {menuCategories.map(cat => (
-                        <TabsContent key={cat.id} value={cat.id} className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <TabsContent
+                            key={cat.id}
+                            value={cat.id}
+                            className="space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500 mt-0"
+                        >
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
                                 {cat.items.map((item, index) => (
-                                    <Card key={index} className="border-none shadow-sm hover:shadow-md transition-shadow">
-                                        <CardHeader className="pb-2">
-                                            <div className="flex justify-between items-start gap-4">
-                                                <CardTitle className="text-xl font-dancing text-primary">{item.name}</CardTitle>
-                                                <span className="font-bold text-secondary whitespace-nowrap">{item.price}</span>
+                                    <Card
+                                        key={index}
+                                        className="border border-border/40 shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 bg-white overflow-hidden group"
+                                    >
+                                        <CardHeader className="pb-3">
+                                            <div className="flex justify-between items-start gap-3">
+                                                <CardTitle className="text-lg md:text-xl font-dancing text-primary group-hover:text-secondary transition-colors leading-tight">
+                                                    {item.name}
+                                                </CardTitle>
+                                                <span className="font-bold text-secondary whitespace-nowrap text-base md:text-lg flex-shrink-0">
+                                                    {item.price}
+                                                </span>
                                             </div>
                                         </CardHeader>
-                                        <CardContent>
-                                            <p className="text-muted-foreground text-sm">{item.description}</p>
+                                        <CardContent className="pt-0">
+                                            <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                                                {item.description}
+                                            </p>
                                         </CardContent>
                                     </Card>
                                 ))}

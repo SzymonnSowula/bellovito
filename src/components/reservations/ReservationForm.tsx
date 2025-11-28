@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -8,10 +8,54 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function ReservationForm() {
+    const [isSubmitted, setIsSubmitted] = useState(false);
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        alert("Prośba o rezerwację wysłana! Potwierdzimy wkrótce.");
+        setIsSubmitted(true);
+
+        // Reset form after showing the message
+        setTimeout(() => {
+            setIsSubmitted(false);
+            (e.target as HTMLFormElement).reset();
+        }, 5000);
     };
+
+    // Show success message if form was submitted
+    if (isSubmitted) {
+        return (
+            <Card className="border-none shadow-lg">
+                <CardContent className="p-8">
+                    <div className="text-center space-y-4">
+                        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                            <svg
+                                className="w-8 h-8 text-green-600"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M5 13l4 4L19 7"
+                                />
+                            </svg>
+                        </div>
+                        <h3 className="text-2xl font-bold text-green-800">
+                            Dziękujemy!
+                        </h3>
+                        <p className="text-lg text-gray-700">
+                            Otrzymaliśmy Twoją rezerwację!
+                        </p>
+                        <p className="text-gray-600">
+                            Skontaktujemy się w ciągu 24h
+                        </p>
+                    </div>
+                </CardContent>
+            </Card>
+        );
+    }
 
     return (
         <Card className="border-none shadow-lg">
