@@ -6,7 +6,7 @@ export function Footer() {
         <footer className="bg-gradient-to-br from-[#722F37] via-[#8B3A44] to-[#722F37] text-white py-12 md:py-16 border-t border-white/10">
             <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="space-y-4">
-                    <Link href="/" className="text-2xl font-dancing font-bold text-[#C5A059] hover:text-[#D4B169] transition-colors">
+                    <Link href="/" className="text-2xl font-dancing font-bold italic text-[#C5A059] hover:text-[#D4B169] transition-colors">
                         BelloVito
                     </Link>
                     <p className="text-white/80 text-sm leading-relaxed">

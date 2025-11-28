@@ -47,7 +47,7 @@ export function Navbar() {
                     href="/"
                     aria-label="BelloVito - Strona główna"
                     className={cn(
-                        "text-2xl md:text-3xl font-heading font-bold transition-colors",
+                        "text-2xl md:text-3xl font-dancing font-bold italic transition-colors",
                         isTransparent ? "text-white" : "text-primary"
                     )}
                 >
@@ -88,7 +88,7 @@ export function Navbar() {
                     <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                         <SheetTitle className="sr-only">Menu Nawigacji</SheetTitle>
                         <div className="flex flex-col gap-8 mt-8">
-                            <Link href="/" className="text-2xl font-heading font-bold text-primary self-center" aria-label="BelloVito - Strona główna">
+                            <Link href="/" className="text-3xl font-dancing font-bold italic text-primary self-center" aria-label="BelloVito - Strona główna">
                                 BelloVito
                             </Link>
                             <nav className="flex flex-col gap-4" aria-label="Nawigacja mobilna">
