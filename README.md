@@ -1,6 +1,7 @@
 # 🍝 BelloVito - Restauracja Włoska
 
-![BelloVito Mockup](./public/images/mockup.jpg)
+
+![mockup](https://github.com/user-attachments/assets/b05b6529-49ef-4a08-aa0b-f9912c8a6474)
 
 Nowoczesna, w pełni responsywna strona internetowa dla restauracji włoskiej BelloVito, zbudowana z wykorzystaniem najnowszych technologii webowych.
 
