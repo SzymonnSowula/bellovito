@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Poppins, Dancing_Script } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import Chatbot from "@/components/chat/Chatbot";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <Footer />
+        <Chatbot />
       </body>
     </html>
   );
